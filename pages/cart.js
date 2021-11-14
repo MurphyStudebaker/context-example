@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import ItemCard from '../components/ItemCard'
 import { useUser } from '../context/UserContext'
 
 export default function Checkout() {
@@ -19,7 +20,12 @@ export default function Checkout() {
       <main>
         <h1>{user.name}, let's checkout!</h1>
         <p>You have {user.cart.length} items in your cart.</p>
-        {/* TODO: display items in cart and cart total */}
+        <div>
+          {/* TODO: Style the checkout page so the cart maps through
+            * to a component for each item in the cart
+          */}
+          <p>{JSON.stringify(user.cart)}</p>
+        </div>
       </main>
     </div>
   )

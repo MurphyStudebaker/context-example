@@ -2,8 +2,33 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #81b29a;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
 }
 
 a {
@@ -13,4 +38,69 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.top {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.top svg {
+  width: 2rem;
+}
+
+.top .cart {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.2rem;
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  overflow: hidden;
+  min-width: 300px;
+  border-radius: 20px;
+}
+.card .img-wrapper {
+  overflow: hidden;
+  max-height: 370px;
+}
+.card .img-wrapper img {
+  display: block;
+  overflow: hidden;
+  height: 30%;
+  width: 100%;
+  object-fit: contain;
+}
+.card .content {
+  padding: 20px;
+  background-color: white;
+}
+.card .content button {
+  width: 100%;
+  padding: 15px 0;
+  color: white;
+  font-weight: 700;
+  background-color: #81b29a;
+  border: none;
+  border-radius: 10px;
+}
+
+.card .content h2 {
+  padding: 5px 0;
+}
+
+.card .content .price {
+  font-size: 1.5rem;
+  padding-bottom: 20px;
 }

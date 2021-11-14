@@ -1,6 +1,7 @@
 import '../styles/globals.css'
 import { useState } from 'react'
 import { UserContext } from '../context/UserContext'
+import { ItemContext } from '../context/ItemContext'
 
 function MyApp({ Component, pageProps }) {
   /** 
@@ -40,18 +41,21 @@ function MyApp({ Component, pageProps }) {
     },
     { 
       name: 'Monstera', 
-      img: 'http://cdn.shopify.com/s/files/1/0541/7602/2711/products/1_f01dec7c-e0c9-40cf-989e-20aa5bd616b2.jpg?v=1623787048',
+      img: 'https://cdn.shopify.com/s/files/1/2622/8410/products/bloomr-usa-plants-beige-potted-monstera-plant-luxury-artificial-flowers-luxury-artificial-plants-luxury-artificial-trees-silk-orchids-wholesale-artificial-flowers-6988821004377_2024x2024.jpg?v=1557203026',
       stock: 0,
       price: 120
     }
   ])
+  const itemsValue = { plants, setPlants }
 
   /* 
    * Wraps all components that consume the context in 
    * a provider, and passes in the default value. 
   */
   return <UserContext.Provider value={userValue}>
-    <Component {...pageProps} />
+    <ItemContext.Provider value={itemsValue}>
+      <Component {...pageProps} />
+    </ItemContext.Provider>
   </UserContext.Provider>
 }
 
