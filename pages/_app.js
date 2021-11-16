@@ -53,9 +53,7 @@ function MyApp({ Component, pageProps }) {
    * a provider, and passes in the default value. 
   */
   return <UserContext.Provider value={userValue}>
-    <ItemContext.Provider value={itemsValue}>
       <Component {...pageProps} />
-    </ItemContext.Provider>
   </UserContext.Provider>
 }
 

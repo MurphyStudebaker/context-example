@@ -5,12 +5,6 @@ import { useUser } from '../context/UserContext'
 export default function Checkout() {
   const { user, setUser } = useUser()
 
-  /**
-   * TODO: use the item context you created to 
-   * display which items are in the user's cart
-   * and the total price to checkout. 
-   */
-
   return (
     <div>
       <Head>
