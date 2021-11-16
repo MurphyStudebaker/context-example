@@ -104,3 +104,49 @@ a {
   font-size: 1.5rem;
   padding-bottom: 20px;
 }
+
+.checkout {
+  width: min(100vw, 750px);
+  padding: 20px;
+  overflow: hidden;
+}
+
+.checkout h1,
+.checkout .subtitle {
+  color: white;
+}
+
+.checkout .record {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: right;
+  margin-top: 20px;
+}
+
+.checkout .img-wrapper {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.checkout .record img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.checkout .record .name {
+  color: darkgreen;
+  font-size: 1.8rem;
+}
+
+.checkout .record .price {
+  font-size: 1.4rem;
+}
+
+.checkout .total {
+  color: white;
+  margin-top: 20px;
+  text-align: right;
+}
